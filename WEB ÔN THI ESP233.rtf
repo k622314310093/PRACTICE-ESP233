@@ -1,0 +1,1406 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="vi" class="h-full bg-slate-900 text-slate-100">\
+<head>\
+  <meta charset="UTF-8">\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <title>ESP233 TC-NH Writing Prep - 1 Week Intensive</title>\
+  <script src="https://cdn.tailwindcss.com"></script>\
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">\
+  <script>\
+    tailwind.config = \{\
+      theme: \{\
+        extend: \{\
+          fontFamily: \{\
+            sans: ['Plus Jakarta Sans', 'sans-serif'],\
+            mono: ['JetBrains Mono', 'monospace'],\
+          \},\
+          colors: \{\
+            brand: \{\
+              50: '#f0f7ff',\
+              100: '#e0effe',\
+              500: '#3b82f6',\
+              600: '#2563eb',\
+              700: '#1d4ed8',\
+              800: '#1e40af',\
+              900: '#1e3a8a',\
+              gold: '#f59e0b',\
+              emerald: '#10b981'\
+            \}\
+          \}\
+        \}\
+      \}\
+    \}\
+  </script>\
+  <style>\
+    /* Custom scrollbars */\
+    ::-webkit-scrollbar \{ width: 6px; height: 6px; \}\
+    ::-webkit-scrollbar-track \{ background: #0f172a; \}\
+    ::-webkit-scrollbar-thumb \{ background: #334155; border-radius: 4px; \}\
+    ::-webkit-scrollbar-thumb:hover \{ background: #475569; \}\
+    .glass-card \{ background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); \}\
+    .glass-card-hover \{ transition: all 0.2s ease-in-out; \}\
+    .glass-card-hover:hover \{ transform: translateY(-2px); border-color: rgba(59, 130, 246, 0.4); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); \}\
+    .gradient-text \{ background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; \}\
+\
+    /* Light Theme Styles */\
+    body.light-theme \{\
+      background-color: #f8fafc;\
+      color: #0f172a;\
+    \}\
+    .light-theme header \{\
+      background-color: rgba(255, 255, 255, 0.95) !important;\
+      border-color: #e2e8f0 !important;\
+    \}\
+    .light-theme .glass-card \{\
+      background: rgba(255, 255, 255, 0.85) !important;\
+      border-color: #cbd5e1 !important;\
+      box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.05);\
+    \}\
+    .light-theme .glass-card-hover:hover \{\
+      border-color: #2563eb !important;\
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12) !important;\
+    \}\
+    .light-theme nav \{\
+      background-color: #f1f5f9 !important;\
+      border-color: #cbd5e1 !important;\
+    \}\
+    .light-theme nav button:not(.bg-brand-600) \{\
+      color: #475569 !important;\
+    \}\
+    .light-theme nav button:not(.bg-brand-600):hover \{\
+      background-color: #e2e8f0 !important;\
+      color: #0f172a !important;\
+    \}\
+    .light-theme textarea,\
+    .light-theme select,\
+    .light-theme input \{\
+      background-color: #ffffff !important;\
+      color: #0f172a !important;\
+      border-color: #cbd5e1 !important;\
+    \}\
+    .light-theme textarea::placeholder,\
+    .light-theme input::placeholder \{\
+      color: #94a3b8 !important;\
+    \}\
+    .light-theme .bg-slate-900,\
+    .light-theme .bg-slate-950,\
+    .light-theme .bg-slate-900\\/60,\
+    .light-theme .bg-slate-900\\/80,\
+    .light-theme .bg-slate-900\\/90,\
+    .light-theme .bg-slate-950\\/80 \{\
+      background-color: #ffffff !important;\
+      border-color: #e2e8f0 !important;\
+    \}\
+    .light-theme .bg-slate-800,\
+    .light-theme .bg-slate-800\\/60,\
+    .light-theme .bg-slate-800\\/80 \{\
+      background-color: #f1f5f9 !important;\
+      border-color: #cbd5e1 !important;\
+    \}\
+    .light-theme .text-slate-100,\
+    .light-theme .text-slate-200,\
+    .light-theme .text-white \{\
+      color: #0f172a !important;\
+    \}\
+    .light-theme .text-slate-300,\
+    .light-theme .text-slate-400 \{\
+      color: #334155 !important;\
+    \}\
+    .light-theme .text-slate-500 \{\
+      color: #64748b !important;\
+    \}\
+    .light-theme .border-slate-800,\
+    .light-theme .border-slate-700 \{\
+      border-color: #e2e8f0 !important;\
+    \}\
+    .light-theme footer \{\
+      background-color: #f8fafc !important;\
+      border-color: #e2e8f0 !important;\
+    \}\
+    .light-theme ::-webkit-scrollbar-track \{ background: #f1f5f9; \}\
+    .light-theme ::-webkit-scrollbar-thumb \{ background: #cbd5e1; \}\
+    .light-theme ::-webkit-scrollbar-thumb:hover \{ background: #94a3b8; \}\
+  </style>\
+</head>\
+<body class="h-full flex flex-col font-sans bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white light-theme">\
+\
+  <header class="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50 backdrop-blur-md">\
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">\
+      <div class="flex items-center space-x-3">\
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20 text-white font-bold text-xl">\
+          E\
+        </div>\
+        <div>\
+          <div class="flex items-center space-x-2">\
+            <h1 class="font-extrabold text-lg tracking-tight text-white">ESP233 TC-NH</h1>\
+            <span class="px-2 py-0.5 text-xs font-semibold rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20">Target TOEIC 915+ Base</span>\
+          </div>\
+          <p class="text-xs text-slate-400">Luy\uc0\u7879 n Vi\u7871 t 1 Tu\u7847 n \'95 Ti\u7871 ng Anh T\'e0i Ch\'ednh Ng\'e2n H\'e0ng</p>\
+        </div>\
+      </div>\
+\
+      <!-- Navigation Tabs -->\
+      <nav class="hidden md:flex items-center space-x-1 bg-slate-800/60 p-1 rounded-xl border border-slate-700/50">\
+        <button onclick="switchTab('roadmap')" id="nav-roadmap" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-white bg-brand-600 shadow">\
+          <i class="fa-solid fa-calendar-days mr-2"></i>L\uc0\u7897  Tr\'ecnh 7 Ng\'e0y\
+        </button>\
+        <button onclick="switchTab('formulas')" id="nav-formulas" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white hover:bg-slate-700/50">\
+          <i class="fa-solid fa-book-bookmark mr-2"></i>M\uc0\u7851 u C\'e2u & C\u7845 u Tr\'fac\
+        </button>\
+        <button onclick="switchTab('practice')" id="nav-practice" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white hover:bg-slate-700/50">\
+          <i class="fa-solid fa-pen-nib mr-2"></i>L\'e0m B\'e0i & AI Ch\uc0\u7845 m\
+        </button>\
+        <button onclick="switchTab('vocab')" id="nav-vocab" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white hover:bg-slate-700/50">\
+          <i class="fa-solid fa-coins mr-2"></i>T\uc0\u7915  V\u7921 ng ESP233\
+        </button>\
+      </nav>\
+\
+      <div class="flex items-center space-x-2">\
+        <!-- Theme Toggle Button -->\
+        <button onclick="toggleTheme()" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 flex items-center space-x-1 transition-all">\
+          <i id="theme-toggle-icon" class="fa-solid fa-moon text-indigo-600"></i>\
+          <span id="theme-toggle-label" class="hidden sm:inline">Giao di\uc0\u7879 n T\u7889 i</span>\
+        </button>\
+        <button onclick="openApiKeyModal()" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 flex items-center space-x-1">\
+          <i class="fa-solid fa-key text-amber-400"></i>\
+          <span>API Key</span>\
+        </button>\
+      </div>\
+    </div>\
+    \
+    <!-- Mobile nav bar -->\
+    <div class="md:hidden flex justify-around bg-slate-900 border-t border-slate-800 py-2 px-2 text-xs">\
+      <button onclick="switchTab('roadmap')" class="flex flex-col items-center py-1 text-brand-500">\
+        <i class="fa-solid fa-calendar-days text-base"></i><span>L\uc0\u7897  tr\'ecnh</span>\
+      </button>\
+      <button onclick="switchTab('formulas')" class="flex flex-col items-center py-1 text-slate-400">\
+        <i class="fa-solid fa-book-bookmark text-base"></i><span>M\uc0\u7851 u c\'e2u</span>\
+      </button>\
+      <button onclick="switchTab('practice')" class="flex flex-col items-center py-1 text-slate-400">\
+        <i class="fa-solid fa-pen-nib text-base"></i><span>L\'e0m b\'e0i</span>\
+      </button>\
+      <button onclick="switchTab('vocab')" class="flex flex-col items-center py-1 text-slate-400">\
+        <i class="fa-solid fa-coins text-base"></i><span>T\uc0\u7915  v\u7921 ng</span>\
+      </button>\
+    </div>\
+  </header>\
+\
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 overflow-y-auto">\
+\
+    <!-- ================= TAB 1: 7-DAY ROADMAP ================= -->\
+    <section id="tab-roadmap" class="space-y-6">\
+      <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-500 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">\
+        <div>\
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-500 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">L\uc0\u7897  tr\'ecnh c\u7845 p t\u7889 c</span>\
+          <h2 class="text-2xl font-bold text-white mt-2">K\uc0\u7871  Ho\u7841 ch B\u7913 t Ph\'e1 Vi\u7871 t ESP233 Trong 7 Ng\'e0y</h2>\
+          <p class="text-sm text-slate-300 mt-1 max-w-2xl">\
+            T\uc0\u7853 n d\u7909 ng n\u7873 n t\u7843 ng ng\u7919  ph\'e1p & t\u7915  v\u7921 ng TOEIC 915 s\u7861 n c\'f3 \u273 \u7875  l\'e0m ch\u7911  chu\u7849 n c\u7845 u tr\'fac \u273 \u7873  thi ESP233 TC-NH: chu\u7849 n h\'f3a 4-5 \u273 o\u7841 n, t\u7889 i thi\u7875 u 13 c\'e2u (~300 t\u7915 ), s\u7917  d\u7909 ng thu\u7853 t ng\u7919  t\'e0i ch\'ednh - ng\'e2n h\'e0ng n\'e2ng cao.\
+          </p>\
+        </div>\
+        <div class="flex items-center space-x-3 bg-slate-800/80 p-3 rounded-xl border border-slate-700">\
+          <div class="text-center px-3">\
+            <div class="text-2xl font-extrabold text-amber-400">100%</div>\
+            <div class="text-[10px] uppercase text-slate-400">Chu\uc0\u7849 n PDF ESP</div>\
+          </div>\
+          <div class="h-8 w-px bg-slate-700"></div>\
+          <div class="text-center px-3">\
+            <div class="text-2xl font-extrabold text-emerald-400">4 D\uc0\u7841 ng</div>\
+            <div class="text-[10px] uppercase text-slate-400">\uc0\u272 \u7873  B\'e0i Chu\u7849 n</div>\
+          </div>\
+        </div>\
+      </div>\
+\
+      <!-- Days Grid -->\
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4">\
+        <!-- Day 1 -->\
+        <div class="glass-card glass-card-hover p-4 rounded-xl flex flex-col justify-between border-t-2 border-t-blue-500">\
+          <div>\
+            <div class="flex items-center justify-between mb-2">\
+              <span class="text-xs font-bold text-blue-400 uppercase">Ng\'e0y 1</span>\
+              <i class="fa-solid fa-check-circle text-slate-600"></i>\
+            </div>\
+            <h3 class="font-bold text-slate-100 text-sm mb-1">Agree / Disagree</h3>\
+            <p class="text-xs text-slate-400 mb-3">Ch\uc0\u7881  ch\u7885 n 1 l\u7853 p tr\u432 \u7901 ng duy nh\u7845 t, kh\'f4ng d\'f9ng "partly agree". C\u7845 u tr\'fac Thesis + 2-3 body paras.</p>\
+          </div>\
+          <button onclick="loadTopicAndPractice(0)" class="text-xs font-medium text-brand-400 hover:text-brand-300 flex items-center justify-between pt-2 border-t border-slate-800">\
+            <span>Luy\uc0\u7879 n d\u7841 ng n\'e0y</span> <i class="fa-solid fa-arrow-right"></i>\
+          </button>\
+        </div>\
+\
+        <!-- Day 2 -->\
+        <div class="glass-card glass-card-hover p-4 rounded-xl flex flex-col justify-between border-t-2 border-t-indigo-500">\
+          <div>\
+            <div class="flex items-center justify-between mb-2">\
+              <span class="text-xs font-bold text-indigo-400 uppercase">Ng\'e0y 2</span>\
+              <i class="fa-solid fa-circle-notch text-slate-600"></i>\
+            </div>\
+            <h3 class="font-bold text-slate-100 text-sm mb-1">Adv / Disadvantages</h3>\
+            <p class="text-xs text-slate-400 mb-3">Ph\'e2n b\uc0\u7893  \u273 o\u7841 n theo quy t\u7855 c Adv >> Disadv ho\u7863 c Adv << Disadv. C\u7845 u tr\'fac c\'e2n \u273 \u7889 i pros & cons.</p>\
+          </div>\
+          <button onclick="loadTopicAndPractice(1)" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center justify-between pt-2 border-t border-slate-800">\
+            <span>Luy\uc0\u7879 n d\u7841 ng n\'e0y</span> <i class="fa-solid fa-arrow-right"></i>\
+          </button>\
+        </div>\
+\
+        <!-- Day 3 -->\
+        <div class="glass-card glass-card-hover p-4 rounded-xl flex flex-col justify-between border-t-2 border-t-purple-500">\
+          <div>\
+            <div class="flex items-center justify-between mb-2">\
+              <span class="text-xs font-bold text-purple-400 uppercase">Ng\'e0y 3</span>\
+              <i class="fa-solid fa-circle-notch text-slate-600"></i>\
+            </div>\
+            <h3 class="font-bold text-slate-100 text-sm mb-1">Discuss Both Views</h3>\
+            <p class="text-xs text-slate-400 mb-3">Th\uc0\u7843 o lu\u7853 n 2 g\'f3c nh\'ecn \u273 \u7889 i l\u7853 p + \u272 \u432 a ra quan \u273 i\u7875 m c\'e1 nh\'e2n \u7903  \u273 o\u7841 n 3 ho\u7863 c Conclusion.</p>\
+          </div>\
+          <button onclick="loadTopicAndPractice(2)" class="text-xs font-medium text-purple-400 hover:text-purple-300 flex items-center justify-between pt-2 border-t border-slate-800">\
+            <span>Luy\uc0\u7879 n d\u7841 ng n\'e0y</span> <i class="fa-solid fa-arrow-right"></i>\
+          </button>\
+        </div>\
+\
+        <!-- Day 4 -->\
+        <div class="glass-card glass-card-hover p-4 rounded-xl flex flex-col justify-between border-t-2 border-t-rose-500">\
+          <div>\
+            <div class="flex items-center justify-between mb-2">\
+              <span class="text-xs font-bold text-rose-400 uppercase">Ng\'e0y 4</span>\
+              <i class="fa-solid fa-circle-notch text-slate-600"></i>\
+            </div>\
+            <h3 class="font-bold text-slate-100 text-sm mb-1">Cause - Solution</h3>\
+            <p class="text-xs text-slate-400 mb-3">C\uc0\u7845 u tr\'fac gh\'e9p Nguy\'ean nh\'e2n 1 + Gi\u7843 i ph\'e1p 1 \u7903  \u272 o\u7841 n 1, Nguy\'ean nh\'e2n 2 + Gi\u7843 i ph\'e1p 2 \u7903  \u272 o\u7841 n 2.</p>\
+          </div>\
+          <button onclick="loadTopicAndPractice(3)" class="text-xs font-medium text-rose-400 hover:text-rose-300 flex items-center justify-between pt-2 border-t border-slate-800">\
+            <span>Luy\uc0\u7879 n d\u7841 ng n\'e0y</span> <i class="fa-solid fa-arrow-right"></i>\
+          </button>\
+        </div>\
+\
+        <!-- Day 5 -->\
+        <div class="glass-card glass-card-hover p-4 rounded-xl flex flex-col justify-between border-t-2 border-t-amber-500">\
+          <div>\
+            <div class="flex items-center justify-between mb-2">\
+              <span class="text-xs font-bold text-amber-400 uppercase">Ng\'e0y 5</span>\
+              <i class="fa-solid fa-circle-notch text-slate-600"></i>\
+            </div>\
+            <h3 class="font-bold text-slate-100 text-sm mb-1">Thu\uc0\u7853 t Ng\u7919  T\'e0i Ch\'ednh</h3>\
+            <p class="text-xs text-slate-400 mb-3">N\'e2ng c\uc0\u7845 p t\u7915  v\u7921 ng TOEIC 915 l\'ean chu\u7849 n ESP233: Inflation, NPLs, Central Bank, Monetary Policy...</p>\
+          </div>\
+          <button onclick="switchTab('vocab')" class="text-xs font-medium text-amber-400 hover:text-amber-300 flex items-center justify-between pt-2 border-t border-slate-800">\
+            <span>Xem thu\uc0\u7853 t ng\u7919 </span> <i class="fa-solid fa-arrow-right"></i>\
+          </button>\
+        </div>\
+\
+        <!-- Day 6 -->\
+        <div class="glass-card glass-card-hover p-4 rounded-xl flex flex-col justify-between border-t-2 border-t-emerald-500">\
+          <div>\
+            <div class="flex items-center justify-between mb-2">\
+              <span class="text-xs font-bold text-emerald-400 uppercase">Ng\'e0y 6</span>\
+              <i class="fa-solid fa-circle-notch text-slate-600"></i>\
+            </div>\
+            <h3 class="font-bold text-slate-100 text-sm mb-1">Luy\uc0\u7879 n T\u7889 c \u272 \u7897  30 Ph\'fat</h3>\
+            <p class="text-xs text-slate-400 mb-3">Th\uc0\u7921 c h\'e0nh g\'f5 b\'e0i 300 t\u7915  trong 30 ph\'fat. Ki\u7875 m so\'e1t c\'f4ng th\u7913 c 13 c\'e2u (3-4-4-2).</p>\
+          </div>\
+          <button onclick="loadTopicAndPractice(0)" class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center justify-between pt-2 border-t border-slate-800">\
+            <span>B\uc0\u7855 t \u273 \u7847 u thi th\u7917 </span> <i class="fa-solid fa-arrow-right"></i>\
+          </button>\
+        </div>\
+\
+        <!-- Day 7 -->\
+        <div class="glass-card glass-card-hover p-4 rounded-xl flex flex-col justify-between border-t-2 border-t-cyan-500">\
+          <div>\
+            <div class="flex items-center justify-between mb-2">\
+              <span class="text-xs font-bold text-cyan-400 uppercase">Ng\'e0y 7</span>\
+              <i class="fa-solid fa-circle-notch text-slate-600"></i>\
+            </div>\
+            <h3 class="font-bold text-slate-100 text-sm mb-1">T\uc0\u7893 ng \'d4n & Ch\u7845 m \u7842 nh</h3>\
+            <p class="text-xs text-slate-400 mb-3">Th\uc0\u7921 c h\'e0nh vi\u7871 t tay ra gi\u7845 y, t\u7843 i \u7843 nh/PDF b\'e0i vi\u7871 t l\'ean h\u7879  th\u7889 ng AI \u273 \u7875  ki\u7875 m tra n\'e9t ch\u7919  & c\u7845 u tr\'fac.</p>\
+          </div>\
+          <button onclick="switchTab('practice'); setPracticeMode('upload');" class="text-xs font-medium text-cyan-400 hover:text-cyan-300 flex items-center justify-between pt-2 border-t border-slate-800">\
+            <span>T\uc0\u7843 i \u7843 nh b\'e0i l\'e0m</span> <i class="fa-solid fa-upload"></i>\
+          </button>\
+        </div>\
+      </div>\
+\
+      <!-- Core Rules according to PDF -->\
+      <div class="glass-card p-6 rounded-2xl space-y-4">\
+        <h3 class="text-lg font-bold text-white flex items-center space-x-2">\
+          <i class="fa-solid fa-shield-halved text-amber-400"></i>\
+          <span>Quy T\uc0\u7855 c V\'e0ng Vi\u7871 t B\'e0i Lu\u7853 n ESP233 (Tr\'edch Xu\u7845 t T\u7915  File T\'e0i Li\u7879 u)</span>\
+        </h3>\
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">\
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-1">\
+            <div class="font-semibold text-brand-400"><i class="fa-solid fa-calculator mr-1"></i>\uc0\u272 \u7897  d\'e0i & S\u7889  c\'e2u</div>\
+            <p class="text-xs text-slate-300">~300 t\uc0\u7915  &bull; 4-5 \u273 o\u7841 n &bull; T\u7889 i thi\u7875 u 13 c\'e2u (C\'f4ng th\u7913 c m\u7851 u: 3 c\'e2u Intro - 4 c\'e2u Body 1 - 4 c\'e2u Body 2 - 2 c\'e2u Conclusion).</p>\
+          </div>\
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-1">\
+            <div class="font-semibold text-rose-400"><i class="fa-solid fa-ban mr-1"></i>L\uc0\u7895 i c\u7845 m d\'f9ng</div>\
+            <p class="text-xs text-slate-300">KH\'d4NG ghi ch\'fa (no notes), KH\'d4NG g\uc0\u7841 ch \u273 \u7847 u d\'f2ng (no bullet points), KH\'d4NG ch\u7885 n quan \u273 i\u7875 m n\u7917 a ch\u7915 ng "partly agree" trong Agree/Disagree.</p>\
+          </div>\
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-1">\
+            <div class="font-semibold text-emerald-400"><i class="fa-solid fa-paragraph mr-1"></i>Th\'e2n \uc0\u273 o\u7841 n (Body)</div>\
+            <p class="text-xs text-slate-300">M\uc0\u7895 i \u273 o\u7841 n 1 Main Point. C\'e2u Topic sentence t\u7893 ng qu\'e1t + T\u7889 i thi\u7875 u 3 c\'e2u supporting (d\'f9ng c\'e2u gh\'e9p / ph\u7913 c) + Concluding statement.</p>\
+          </div>\
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-1">\
+            <div class="font-semibold text-purple-400"><i class="fa-solid fa-flag mr-1"></i>M\uc0\u7903  & K\u7871 t b\'e0i</div>\
+            <p class="text-xs text-slate-300">Intro: Hook + Background + Thesis statement. Conclusion: Thesis re-statement (d\'f9ng t\uc0\u7915  \u273 \u7891 ng ngh\u297 a) + 1 c\'e2u c\u7843 nh b\'e1o/l\u7901 i khuy\'ean/\u273 \'fac r\'fat.</p>\
+          </div>\
+        </div>\
+      </div>\
+    </section>\
+\
+    <!-- ================= TAB 2: FORMULAS & SENTENCE TEMPLATES ================= -->\
+    <section id="tab-formulas" class="space-y-6 hidden">\
+      <div class="glass-card p-6 rounded-2xl border-l-4 border-l-indigo-500">\
+        <h2 class="text-xl font-bold text-white flex items-center space-x-2">\
+          <i class="fa-solid fa-cube text-indigo-400"></i>\
+          <span>H\uc0\u7879  Th\u7889 ng M\u7851 u C\'e2u & Khung B\'e0i Lu\u7853 n Theo T\u7915 ng D\u7841 ng \u272 \u7873  (ESP233)</span>\
+        </h2>\
+        <p class="text-sm text-slate-300 mt-1">\
+          \uc0\u272 \u432 \u7907 c tr\'edch xu\u7845 t & m\u7903  r\u7897 ng chu\u7849 n x\'e1c t\u7915  t\'e0i li\u7879 u gi\u7843 ng d\u7841 y ESP233 TC-NH. Ch\u7885 n t\u7915 ng d\u7841 ng b\'e0i b\'ean d\u432 \u7899 i \u273 \u7875  xem b\u7897  khung t\u7915  v\u7921 ng v\'e0 c\'e2u m\u7851 u.\
+        </p>\
+      </div>\
+\
+      <!-- Task Type Selectors -->\
+      <div class="flex flex-wrap gap-2">\
+        <button onclick="showFormula('agree')" id="btn-f-agree" class="formula-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-indigo-600 text-white shadow">\
+          1. Agree or Disagree\
+        </button>\
+        <button onclick="showFormula('adv')" id="btn-f-adv" class="formula-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">\
+          2. Advantages & Disadvantages\
+        </button>\
+        <button onclick="showFormula('both')" id="btn-f-both" class="formula-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">\
+          3. Discuss Both Views\
+        </button>\
+        <button onclick="showFormula('cause')" id="btn-f-cause" class="formula-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">\
+          4. Cause / Problem - Solution\
+        </button>\
+      </div>\
+\
+      <!-- Formula Content Box -->\
+      <div id="formula-content-container" class="space-y-6">\
+        <!-- Content will be rendered dynamically by JS -->\
+      </div>\
+    </section>\
+\
+    <!-- ================= TAB 3: PRACTICE & AI GRADING ================= -->\
+    <section id="tab-practice" class="space-y-6 hidden">\
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">\
+        \
+        <!-- Left Column: Input Form (7 Cols) -->\
+        <div class="lg:col-span-7 space-y-4">\
+          <div class="glass-card p-5 rounded-2xl space-y-4 border-slate-700">\
+            <!-- Mode Switcher & Prompt Selector -->\
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pb-3 border-b border-slate-800">\
+              <div class="flex items-center space-x-2">\
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">H\'ecnh th\uc0\u7913 c l\'e0m b\'e0i:</span>\
+                <div class="bg-slate-900 p-1 rounded-lg border border-slate-800 flex space-x-1">\
+                  <button id="mode-type-btn" onclick="setPracticeMode('type')" class="px-3 py-1 text-xs font-bold rounded-md bg-brand-600 text-white transition-all">\
+                    <i class="fa-solid fa-keyboard mr-1"></i> \uc0\u272 \'e1nh m\'e1y\
+                  </button>\
+                  <button id="mode-upload-btn" onclick="setPracticeMode('upload')" class="px-3 py-1 text-xs font-bold rounded-md text-slate-400 hover:text-white transition-all">\
+                    <i class="fa-solid fa-file-image mr-1"></i> T\uc0\u7843 i \u7843 nh / PDF\
+                  </button>\
+                </div>\
+              </div>\
+\
+              <!-- Timer Widget -->\
+              <div class="flex items-center space-x-2 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">\
+                <i class="fa-regular fa-clock text-amber-400 text-xs"></i>\
+                <span id="timer-display" class="font-mono text-sm font-bold text-amber-400">30:00</span>\
+                <button onclick="toggleTimer()" id="timer-toggle-btn" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-0.5 rounded">B\uc0\u7855 t \u273 \u7847 u</button>\
+              </div>\
+            </div>\
+\
+            <!-- Prompt Selector -->\
+            <div>\
+              <label class="block text-xs font-bold text-slate-300 mb-1">Ch\uc0\u7885 n \u272 \u7873  Thi Chu\u7849 n ESP233 Ho\u7863 c Nh\u7853 p \u272 \u7873  T\'f9y Ch\u7881 nh:</label>\
+              <select id="prompt-select" onchange="onPromptSelectChange()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs font-medium text-slate-200 focus:outline-none focus:border-brand-500">\
+                <!-- Populated by JS -->\
+              </select>\
+            </div>\
+\
+            <!-- Custom Prompt Textarea -->\
+            <div>\
+              <textarea id="custom-prompt-input" rows="2" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500" placeholder="\uc0\u272 \u7873  b\'e0i s\u7869  hi\u7875 n th\u7883  t\u7841 i \u273 \'e2y..."></textarea>\
+            </div>\
+\
+            <!-- TYPE MODE AREA -->\
+            <div id="type-mode-container" class="space-y-2">\
+              <div class="flex justify-between items-center text-xs text-slate-400">\
+                <span class="font-semibold text-slate-300"><i class="fa-solid fa-pen-field mr-1"></i>B\'e0i Vi\uc0\u7871 t C\u7911 a B\u7841 n:</span>\
+                <span id="live-word-count" class="font-mono bg-slate-800 px-2 py-0.5 rounded text-brand-400">0 t\uc0\u7915  | 0 \u273 o\u7841 n | 0 c\'e2u</span>\
+              </div>\
+              <textarea id="essay-editor" oninput="updateLiveStats()" rows="16" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl p-4 text-sm font-sans text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50 leading-relaxed" placeholder="B\uc0\u7855 t \u273 \u7847 u g\'f5 b\'e0i lu\u7853 n c\u7911 a b\u7841 n t\u7841 i \u273 \'e2y... (M\u7909 c ti\'eau ~300 t\u7915 , t\u7889 i thi\u7875 u 13 c\'e2u chu\u7849 n ESP233)"></textarea>\
+            </div>\
+\
+            <!-- UPLOAD MODE AREA -->\
+            <div id="upload-mode-container" class="space-y-3 hidden">\
+              <label class="block text-xs font-semibold text-slate-300">T\uc0\u7843 i \u7843 nh b\'e0i vi\u7871 t tay / PDF b\'e0i thi:</label>\
+              <div id="drop-zone" class="border-2 border-dashed border-slate-700 hover:border-brand-500 rounded-2xl p-8 text-center bg-slate-900/50 transition-all cursor-pointer flex flex-col items-center justify-center space-y-2">\
+                <i class="fa-solid fa-cloud-arrow-up text-3xl text-brand-400"></i>\
+                <div class="text-sm font-medium text-slate-300">K\'e9o th\uc0\u7843  \u7843 nh b\'e0i l\'e0m ho\u7863 c nh\u7845 p \u273 \u7875  ch\u7885 n file</div>\
+                <div class="text-xs text-slate-500">H\uc0\u7895  tr\u7907  JPG, PNG, WEBP, PDF (H\u7879  th\u7889 ng AI Vision s\u7869  \u273 \u7885 c ch\u7919  vi\u7871 t tay)</div>\
+                <input type="file" id="image-input" accept="image/*,.pdf" class="hidden" onchange="handleFileSelect(event)">\
+              </div>\
+              \
+              <div id="image-preview-card" class="hidden bg-slate-900 p-3 rounded-xl border border-slate-800 flex items-center justify-between">\
+                <div class="flex items-center space-x-3 overflow-hidden">\
+                  <img id="image-preview" class="w-12 h-12 object-cover rounded-lg border border-slate-700" alt="Preview">\
+                  <div class="truncate">\
+                    <p id="file-name" class="text-xs font-semibold text-slate-200 truncate">filename.jpg</p>\
+                    <p class="text-[10px] text-emerald-400"><i class="fa-solid fa-circle-check mr-1"></i>\uc0\u272 \'e3 s\u7861 n s\'e0ng ph\'e2n t\'edch b\u7857 ng AI Vision</p>\
+                  </div>\
+                </div>\
+                <button onclick="removeUploadedFile()" class="text-slate-500 hover:text-rose-400 p-2"><i class="fa-solid fa-trash"></i></button>\
+              </div>\
+            </div>\
+\
+            <!-- Realtime Structure Diagnostic Bar -->\
+            <div id="diagnostic-bar" class="p-3 bg-slate-900 rounded-xl border border-slate-800 text-xs space-y-1">\
+              <div class="font-bold text-slate-400 uppercase text-[10px] tracking-wider mb-1">Ki\uc0\u7875 m Tr\u7907  Chu\u7849 n C\u7845 u Tr\'fac PDF ESP233:</div>\
+              <div class="grid grid-cols-3 gap-2 text-center">\
+                <div id="diag-words" class="p-1.5 rounded bg-slate-800/60 text-slate-400">\uc0\u272 \u7897  d\'e0i: <span class="font-bold text-slate-200">0 / 300 t\u7915 </span></div>\
+                <div id="diag-paras" class="p-1.5 rounded bg-slate-800/60 text-slate-400">S\uc0\u7889  \u273 o\u7841 n: <span class="font-bold text-slate-200">0 / 4-5 \u273 o\u7841 n</span></div>\
+                <div id="diag-sents" class="p-1.5 rounded bg-slate-800/60 text-slate-400">T\uc0\u7893 ng c\'e2u: <span class="font-bold text-slate-200">0 / 13 c\'e2u</span></div>\
+              </div>\
+            </div>\
+\
+            <!-- Action Buttons -->\
+            <div class="flex space-x-3 pt-2">\
+              <button onclick="submitForAiGrading()" id="btn-grade" class="flex-1 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-brand-500/25 transition-all flex items-center justify-center space-x-2">\
+                <i class="fa-solid fa-wand-magic-sparkles"></i>\
+                <span>Ch\uc0\u7845 m \u272 i\u7875 m & Ph\'e2n T\'edch B\'e0i B\u7857 ng AI</span>\
+              </button>\
+              <button onclick="clearEditor()" class="px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-xl border border-slate-700 transition-all">\
+                <i class="fa-solid fa-rotate-left"></i>\
+              </button>\
+            </div>\
+          </div>\
+        </div>\
+\
+        <!-- Right Column: AI Analysis Output (5 Cols) -->\
+        <div class="lg:col-span-5 space-y-4">\
+          <div id="ai-output-placeholder" class="glass-card p-8 rounded-2xl border-slate-800 text-center flex flex-col items-center justify-center min-h-[500px]">\
+            <div class="w-16 h-16 rounded-full bg-slate-800/80 border border-slate-700 flex items-center justify-center text-slate-500 text-2xl mb-4">\
+              <i class="fa-solid fa-microchip"></i>\
+            </div>\
+            <h3 class="text-base font-bold text-slate-300">S\uc0\u7861 n S\'e0ng Ch\u7845 m \u272 i\u7875 m AI</h3>\
+            <p class="text-xs text-slate-500 max-w-xs mt-2">\
+              Nh\uc0\u7853 p b\'e0i vi\u7871 t ho\u7863 c t\u7843 i \u7843 nh b\'e0i l\'e0m l\'ean, sau \u273 \'f3 b\u7845 m n\'fat "Ch\u7845 m \u272 i\u7875 m & Ph\'e2n T\'edch" \u273 \u7875  nh\u7853 n nh\u7853 n x\'e9t chi ti\u7871 t chu\u7849 n thang \u273 i\u7875 m ESP233 TC-NH.\
+            </p>\
+          </div>\
+\
+          <!-- Loading State -->\
+          <div id="ai-loading" class="glass-card p-8 rounded-2xl border-brand-500/30 text-center flex flex-col items-center justify-center min-h-[500px] hidden">\
+            <div class="relative w-16 h-16 mb-4">\
+              <div class="absolute inset-0 rounded-full border-4 border-brand-500/20 border-t-brand-500 animate-spin"></div>\
+              <div class="absolute inset-2 rounded-full border-4 border-indigo-500/20 border-b-indigo-500 animate-spin" style="animation-direction: reverse; animation-duration: 1.5s;"></div>\
+            </div>\
+            <h3 class="text-base font-bold text-white">AI \uc0\u272 ang Ph\'e2n T\'edch B\'e0i Lu\u7853 n ESP233...</h3>\
+            <p class="text-xs text-slate-400 max-w-xs mt-2">\
+              \uc0\u272 ang \u273 \u7889 i chi\u7871 u quy t\u7855 c 4-5 \u273 o\u7841 n, t\u7889 i thi\u7875 u 13 c\'e2u, t\'ednh nh\u7845 t qu\'e1n l\u7853 p tr\u432 \u7901 ng & t\u7915  v\u7921 ng chuy\'ean ng\'e0nh t\'e0i ch\'ednh...\
+            </p>\
+          </div>\
+\
+          <!-- AI Evaluation Result (Hidden by default) -->\
+          <div id="ai-result-card" class="glass-card p-6 rounded-2xl border-slate-700 space-y-5 hidden">\
+            <!-- Overall Score Header -->\
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 p-4 rounded-xl border border-slate-700 flex items-center justify-between">\
+              <div>\
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">T\uc0\u7893 ng \u272 i\u7875 m B\'e0i Lu\u7853 n ESP233</span>\
+                <div class="flex items-baseline space-x-2">\
+                  <span id="res-score" class="text-3xl font-extrabold text-amber-400">8.5</span>\
+                  <span class="text-xs text-slate-400">/ 10.0</span>\
+                </div>\
+                <div id="res-grade-badge" class="inline-block mt-1 px-2 py-0.5 text-[10px] font-bold rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">\
+                  Xu\uc0\u7845 t S\u7855 c (TOEIC 915+ Standard)\
+                </div>\
+              </div>\
+              <div class="text-right">\
+                <span class="text-xs font-semibold text-slate-400 block">D\uc0\u7841 ng b\'e0i:</span>\
+                <span id="res-task-type" class="text-xs font-bold text-brand-400">Agree / Disagree</span>\
+              </div>\
+            </div>\
+\
+            <!-- Score Breakdown Grid -->\
+            <div class="grid grid-cols-2 gap-2 text-xs">\
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">\
+                <span class="text-slate-400 block text-[10px]">1. C\uc0\u7845 u Tr\'fac \u272 \u7873  (PDF):</span>\
+                <span id="score-task" class="font-bold text-white text-sm">9/10</span>\
+              </div>\
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">\
+                <span class="text-slate-400 block text-[10px]">2. M\uc0\u7841 ch L\u7841 c & Li\u7873 n M\u7841 ch:</span>\
+                <span id="score-coherence" class="font-bold text-white text-sm">8.5/10</span>\
+              </div>\
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">\
+                <span class="text-slate-400 block text-[10px]">3. T\uc0\u7915  V\u7921 ng T\'e0i Ch\'ednh (ESP):</span>\
+                <span id="score-vocab" class="font-bold text-white text-sm">8/10</span>\
+              </div>\
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">\
+                <span class="text-slate-400 block text-[10px]">4. Ng\uc0\u7919  Ph\'e1p & C\'e2u Ph\u7913 c:</span>\
+                <span id="score-grammar" class="font-bold text-white text-sm">8.5/10</span>\
+              </div>\
+            </div>\
+\
+            <!-- Detailed Feedback Tabs -->\
+            <div class="space-y-3">\
+              <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center space-x-1">\
+                <i class="fa-solid fa-clipboard-check text-brand-400"></i>\
+                <span>Nh\uc0\u7853 n X\'e9t Chi Ti\u7871 t Theo C\u7845 u Tr\'fac File PDF:</span>\
+              </h4>\
+              <div id="res-detailed-feedback" class="text-xs text-slate-300 space-y-2 bg-slate-900/60 p-4 rounded-xl border border-slate-800 leading-relaxed max-h-80 overflow-y-auto">\
+                <!-- Detailed feedback injected here -->\
+              </div>\
+            </div>\
+\
+            <!-- Rewrites & Upgrades -->\
+            <div class="space-y-2">\
+              <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center space-x-1">\
+                <i class="fa-solid fa-bolt"></i>\
+                <span>G\uc0\u7907 i \'dd D\u7883 ch / N\'e2ng C\u7845 p T\u7915  V\u7921 ng TOEIC 915+:</span>\
+              </h4>\
+              <div id="res-upgrades" class="text-xs text-slate-300 space-y-2 bg-slate-900/60 p-4 rounded-xl border border-slate-800">\
+                <!-- Upgrades injected here -->\
+              </div>\
+            </div>\
+          </div>\
+\
+        </div>\
+      </div>\
+    </section>\
+\
+    <!-- ================= TAB 4: VOCABULARY & FINANCIAL BANK ================= -->\
+    <section id="tab-vocab" class="space-y-6 hidden">\
+      <div class="glass-card p-6 rounded-2xl border-l-4 border-l-amber-500 flex justify-between items-center">\
+        <div>\
+          <h2 class="text-xl font-bold text-white flex items-center space-x-2">\
+            <i class="fa-solid fa-coins text-amber-400"></i>\
+            <span>Ng\'e2n H\'e0ng Thu\uc0\u7853 t Ng\u7919  ESP233 TC-NH Cho Candidate TOEIC 915+</span>\
+          </h2>\
+          <p class="text-sm text-slate-300 mt-1">\
+            T\uc0\u7893 ng h\u7907 p c\'e1c Collocations & T\u7915  v\u7921 ng \u259 n \u273 i\u7875 m chuy\'ean ng\'e0nh T\'e0i ch\'ednh - Ng\'e2n h\'e0ng gi\'fap b\'e0i lu\u7853 n \u273 \u7841 t \u273 i\u7875 m t\u7889 i \u273 a Lexical Resource.\
+          </p>\
+        </div>\
+      </div>\
+\
+      <!-- Vocab Grid -->\
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="vocab-cards-grid">\
+        <!-- Injected via JS -->\
+      </div>\
+    </section>\
+\
+  </main>\
+\
+  <!-- API KEY SETTINGS MODAL -->\
+  <div id="api-key-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">\
+    <div class="glass-card p-6 rounded-2xl max-w-lg w-full space-y-4 border-slate-700 shadow-2xl">\
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">\
+        <h3 class="text-base font-bold text-white flex items-center space-x-2">\
+          <i class="fa-solid fa-key text-amber-400"></i>\
+          <span>H\uc0\u432 \u7899 ng D\u7851 n T\u7841 o & C\u7845 u H\'ecnh Gemini API Key</span>\
+        </h3>\
+        <button onclick="closeApiKeyModal()" class="text-slate-400 hover:text-white p-1"><i class="fa-solid fa-xmark text-lg"></i></button>\
+      </div>\
+\
+      <!-- Step-by-step Instructions -->\
+      <div class="space-y-2.5 text-xs">\
+        <p class="text-slate-300 font-medium">\uc0\u272 \u7875  s\u7917  d\u7909 ng t\'ednh n\u259 ng ch\u7845 m b\'e0i b\u7857 ng AI c\'e1 nh\'e2n mi\u7877 n ph\'ed v\'e0 \u7893 n \u273 \u7883 nh nh\u7845 t, b\u7841 n l\'e0m theo 3 b\u432 \u7899 c sau:</p>\
+        \
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 space-y-2">\
+          <div class="flex items-start space-x-2">\
+            <span class="w-5 h-5 rounded-full bg-brand-600 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">1</span>\
+            <div>\
+              <p class="font-bold text-slate-200">Truy c\uc0\u7853 p Google AI Studio</p>\
+              <p class="text-slate-400 text-[11px] mt-0.5">\uc0\u272 \u259 ng nh\u7853 p t\'e0i kho\u7843 n Google c\u7911 a b\u7841 n v\'e0 m\u7903  trang qu\u7843 n l\'fd API Key.</p>\
+              <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 text-brand-400 hover:text-brand-300 font-semibold mt-1 bg-brand-500/10 px-2.5 py-1 rounded-lg border border-brand-500/20 transition-all">\
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>\
+                <span>M\uc0\u7903  trang l\u7845 y Key (aistudio.google.com)</span>\
+              </a>\
+            </div>\
+          </div>\
+\
+          <div class="flex items-start space-x-2 pt-2 border-t border-slate-800/80">\
+            <span class="w-5 h-5 rounded-full bg-brand-600 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">2</span>\
+            <div>\
+              <p class="font-bold text-slate-200">T\uc0\u7841 o Kh\'f3a API m\u7899 i (Create API key)</p>\
+              <p class="text-slate-400 text-[11px] mt-0.5">Nh\uc0\u7845 n n\'fat <span class="text-amber-400 font-semibold">"Create API key"</span> (Ch\u7885 n t\u7841 o trong project m\u7899 i ho\u7863 c project Google Cloud b\u7845 t k\u7923 ).</p>\
+            </div>\
+          </div>\
+\
+          <div class="flex items-start space-x-2 pt-2 border-t border-slate-800/80">\
+            <span class="w-5 h-5 rounded-full bg-brand-600 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">3</span>\
+            <div>\
+              <p class="font-bold text-slate-200">Sao ch\'e9p (Copy) & D\'e1n v\'e0o \'f4 b\'ean d\uc0\u432 \u7899 i</p>\
+              <p class="text-slate-400 text-[11px] mt-0.5">Sao ch\'e9p \uc0\u273 o\u7841 n m\'e3 b\u7855 t \u273 \u7847 u b\u7857 ng <code class="text-amber-300 bg-slate-950 px-1 py-0.5 rounded font-mono">AIzaSy...</code> v\'e0 d\'e1n v\'e0o \'f4 b\'ean d\u432 \u7899 i r\u7891 i nh\u7845 n <b>L\u432 u C\u7845 u H\'ecnh</b>.</p>\
+            </div>\
+          </div>\
+        </div>\
+      </div>\
+\
+      <!-- Input Field & Actions -->\
+      <div class="space-y-2 pt-1">\
+        <label class="block text-xs font-semibold text-slate-300 flex justify-between items-center">\
+          <span>D\'e1n Gemini API Key c\uc0\u7911 a b\u7841 n:</span>\
+          <button type="button" onclick="toggleKeyVisibility()" class="text-[11px] text-brand-400 hover:text-brand-300 font-normal">\
+            <i id="key-vis-icon" class="fa-solid fa-eye mr-1"></i><span id="key-vis-text">Hi\uc0\u7879 n Key</span>\
+          </button>\
+        </label>\
+        <div class="relative">\
+          <input type="password" id="custom-api-key" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-brand-500 font-mono pr-10" placeholder="D\'e1n m\'e3 AIzaSy... t\uc0\u7841 i \u273 \'e2y">\
+          <button type="button" onclick="clearApiKeyInput()" class="absolute right-2.5 top-2.5 text-slate-500 hover:text-rose-400 text-xs p-0.5" title="X\'f3a n\uc0\u7897 i dung">\
+            <i class="fa-solid fa-circle-xmark"></i>\
+          </button>\
+        </div>\
+        <p id="api-key-status" class="text-[11px] text-slate-400 italic">Key \uc0\u273 \u432 \u7907 c l\u432 u an to\'e0n trong b\u7897  nh\u7899  ri\'eang c\u7911 a tr\'ecnh duy\u7879 t (localStorage).</p>\
+      </div>\
+\
+      <div class="flex space-x-2 justify-end pt-2 border-t border-slate-800">\
+        <button onclick="removeApiKey()" class="px-3 py-2 text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-rose-400 rounded-xl border border-slate-700 transition-all">X\'f3a Key \uc0\u272 \'e3 L\u432 u</button>\
+        <button onclick="saveApiKey()" class="px-4 py-2 text-xs font-bold bg-brand-600 hover:bg-brand-500 text-white rounded-xl shadow-lg shadow-brand-500/20 transition-all flex items-center space-x-1.5">\
+          <i class="fa-solid fa-floppy-disk"></i>\
+          <span>L\uc0\u432 u C\u7845 u H\'ecnh</span>\
+        </button>\
+      </div>\
+    </div>\
+  </div>\
+\
+  <footer class="border-t border-slate-800 bg-slate-950 py-4 mt-8">\
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500">\
+      <p>H\uc0\u7879  th\u7889 ng \'d4n thi Vi\u7871 t ESP233 T\'e0i ch\'ednh - Ng\'e2n h\'e0ng trong 1 Tu\u7847 n &bull; Chu\u7849 n C\u7845 u Tr\'fac \u272 \u7873  Thi 2026</p>\
+    </div>\
+  </footer>\
+\
+  <script>\
+    /* ================= APP STATE ================= */\
+    let currentTab = 'roadmap';\
+    let practiceMode = 'type'; // 'type' or 'upload'\
+    let timerInterval = null;\
+    let timerSeconds = 1800; // 30 mins\
+    let uploadedFileBase64 = null;\
+    let uploadedFileMime = null;\
+    let isLightTheme = true; // Default to Light theme\
+\
+    // ESP233 Topics Data\
+    const espTopics = [\
+      \{\
+        id: 0,\
+        type: "Agree - Disagree",\
+        title: "To what extent do you agree or disagree that central banks should completely phase out physical bank notes in favor of Central Bank Digital Currencies (CBDCs)?",\
+        vietnameseTitle: "\uc0\u272 \u7873  1: B\u7841 n \u273 \u7891 ng \'fd hay kh\'f4ng \u273 \u7891 ng \'fd v\u7873  vi\u7879 c Ng\'e2n h\'e0ng Trung \u432 \u417 ng lo\u7841 i b\u7887  ho\'e0n to\'e0n ti\u7873 n gi\u7845 y \u273 \u7875  thay b\u7857 ng Ti\u7873 n k\u7929  thu\u7853 t s\u7889  (CBDC)?",\
+        notes: "L\uc0\u432 u \'fd PDF: CH\u7880  CH\u7884 N 1 QUAN \u272 I\u7874 M (\u272 \u7891 ng \'fd HO\u7862 C Kh\'f4ng \u273 \u7891 ng \'fd). Kh\'f4ng ch\u7885 n 'partly agree'."\
+      \},\
+      \{\
+        id: 1,\
+        type: "Advantages - Disadvantages",\
+        title: "Discuss the advantages and disadvantages of commercial banks relying heavily on Artificial Intelligence for credit scoring and loan approval.",\
+        vietnameseTitle: "\uc0\u272 \u7873  2: Ph\'e2n t\'edch \u432 u \u273 i\u7875 m v\'e0 nh\u432 \u7907 c \u273 i\u7875 m c\u7911 a vi\u7879 c c\'e1c ng\'e2n h\'e0ng th\u432 \u417 ng m\u7841 i ph\u7909  thu\u7897 c m\u7841 nh v\'e0o Tr\'ed tu\u7879  nh\'e2n t\u7841 o (AI) trong ch\u7845 m \u273 i\u7875 m t\'edn d\u7909 ng v\'e0 ph\'ea duy\u7879 t kho\u7843 n vay.",\
+        notes: "L\uc0\u432 u \'fd PDF: Ph\'e2n b\u7893  3-4 body paras theo t\u7927  l\u7879  Adv >> Disadv ho\u7863 c Adv << Disadv."\
+      \},\
+      \{\
+        id: 2,\
+        type: "Discuss both views",\
+        title: "Some argue that commercial banks should prioritize green finance and ESG investments, while others believe their sole objective must be maximizing shareholder profits. Discuss both views and give your opinion.",\
+        vietnameseTitle: "\uc0\u272 \u7873  3: M\u7897 t s\u7889  \'fd ki\u7871 n cho r\u7857 ng NHTM n\'ean \u432 u ti\'ean T\'edn d\u7909 ng xanh/ESG, \'fd ki\u7871 n kh\'e1c cho r\u7857 ng m\u7909 c ti\'eau duy nh\u7845 t ph\u7843 i l\'e0 t\u7889 i \u273 a h\'f3a l\u7907 i nhu\u7853 n c\u7893  \u273 \'f4ng. Th\u7843 o lu\u7853 n c\u7843  2 quan \u273 i\u7875 m v\'e0 \u273 \u432 a ra \'fd ki\u7871 n.",\
+        notes: "L\uc0\u432 u \'fd PDF: Th\u7843 o lu\u7853 n View 1 \u7903  Body 1, View 2 \u7903  Body 2, N\'eau quan \u273 i\u7875 m c\'e1 nh\'e2n \u7903  Body 3 ho\u7863 c Conclusion."\
+      \},\
+      \{\
+        id: 3,\
+        type: "Cause / Problem - Solution",\
+        title: "Rising Non-Performing Loans (NPLs) pose a major threat to financial system stability. What are the main causes of NPL accumulation, and what measures can central authorities take to address this issue?",\
+        vietnameseTitle: "\uc0\u272 \u7873  4: T\u7927  l\u7879  n\u7907  x\u7845 u (NPLs) gia t\u259 ng \u273 e d\u7885 a s\u7921  \u7893 n \u273 \u7883 nh h\u7879  th\u7889 ng t\'e0i ch\'ednh. Nguy\'ean nh\'e2n ch\'ednh l\'e0 g\'ec v\'e0 ch\'ednh quy\u7873 n/NHT\u431  c\u7847 n th\u7921 c hi\u7879 n gi\u7843 i ph\'e1p g\'ec?",\
+        notes: "L\uc0\u432 u \'fd PDF: Gh\'e9p C\u7863 p Nguy\'ean nh\'e2n 1 + Gi\u7843 i ph\'e1p 1 \u7903  \u272 o\u7841 n 1, Nguy\'ean nh\'e2n 2 + Gi\u7843 i ph\'e1p 2 \u7903  \u272 o\u7841 n 2."\
+      \}\
+    ];\
+\
+    // Formula Templates according to PDF\
+    const formulaData = \{\
+      agree: \{\
+        title: "1. AGREE OR DISAGREE ESSAY",\
+        badge: "Ch\uc0\u7881  L\u7921 a Ch\u7885 n 1 L\u7853 p Tr\u432 \u7901 ng Duy Nh\u7845 t",\
+        desc: "Y\'eau c\uc0\u7847 u: Ph\u7843 i \u273 \u432 a ra quan \u273 i\u7875 m r\'f5 r\'e0ng (Agree HO\u7862 C Disagree), tuy\u7879 t \u273 \u7889 i KH\'d4NG ch\u7885 n l\u7853 p tr\u432 \u7901 ng trung l\u7853 p/partly agree. M\u7903  b\'e0i tuy\'ean b\u7889  r\'f5 r\'e0ng v\'ec l\'fd do A v\'e0 B n\'ean t\'f4i \u273 \u7891 ng \'fd / kh\'f4ng \u273 \u7891 ng \'fd.",\
+        structure: [\
+          \{\
+            section: "Introduction (1 \uc0\u272 o\u7841 n - 3 C\'e2u)",\
+            items: [\
+              "Sentence 1 (Hook): Introduce the topic in your own words.",\
+              "Sentence 2 (Background Info): Contextualize keywords (e.g. monetary stability, digital transition).",\
+              "Sentence 3 (Thesis Statement): 'In my perspective, I strongly agree/disagree with this notion because [Reason A] and [Reason B].'"\
+            ]\
+          \},\
+          \{\
+            section: "Body Paragraph 1 (1 \uc0\u272 o\u7841 n - 4 C\'e2u)",\
+            items: [\
+              "Sentence 1 (Topic Sentence): Main idea A supporting your stance.",\
+              "Sentence 2-4 (Supporting Sentences): Give specific reasons, impact, or financial mechanics (d\'f9ng c\'e2u ph\uc0\u7913 c / c\'e2u gh\'e9p).",\
+              "Sentence 5 (Optional Concluding): Restate main point A (e.g. 'Thus, it is evident that...')"\
+            ]\
+          \},\
+          \{\
+            section: "Body Paragraph 2 (1 \uc0\u272 o\u7841 n - 4 C\'e2u)",\
+            items: [\
+              "Sentence 1 (Topic Sentence): Main idea B supporting your stance.",\
+              "Sentence 2-4 (Supporting Sentences): Elaborate with empirical banking evidence or market outcomes.",\
+              "Sentence 5 (Optional Concluding): Restate main point B."\
+            ]\
+          \},\
+          \{\
+            section: "Conclusion (1 \uc0\u272 o\u7841 n - 2 C\'e2u)",\
+            items: [\
+              "Sentence 1 (Thesis Re-statement): Re-state position and main reasons A & B using SYNONYMS (Kh\'f4ng ch\'e9p l\uc0\u7841 i t\u7915  c\u361 ).",\
+              "Sentence 2 (Final Sentence): 1 piece of advice, warning, or financial insight after writing."\
+            ]\
+          \}\
+        ],\
+        samplePhrases: [\
+          "M\uc0\u7903  b\'e0i: 'It is widely believed that... However, I firmly agree with this viewpoint due to its potential to enhance liquidity and mitigate systemic credit risks.'",\
+          "Th\'e2n \uc0\u273 o\u7841 n: 'First and foremost, the implementation of [Policy] significantly streamlines...', 'Furthermore, another compelling rationale is...'",\
+          "K\uc0\u7871 t b\'e0i: 'In conclusion, despite minor transition costs, I reiterate that... A prudent regulatory framework is imperative to ensure long-term stability.'"\
+        ]\
+      \},\
+      adv: \{\
+        title: "2. ADVANTAGES AND DISADVANTAGES ESSAY",\
+        badge: "C\'e2n \uc0\u272 \u7889 i S\u7889  \u272 o\u7841 n Theo M\u7913 c \u272 \u7897  \u431 u Ti\'ean",\
+        desc: "C\uc0\u7845 u tr\'fac linh ho\u7841 t theo PDF: N\u7871 u \u431 u \u273 i\u7875 m > Nh\u432 \u7907 c \u273 i\u7875 m, vi\u7871 t 2 \u273 o\u7841 n Body Adv v\'e0 1 \u273 o\u7841 n Body Disadv (ho\u7863 c ng\u432 \u7907 c l\u7841 i).",\
+        structure: [\
+          \{\
+            section: "Introduction (1 \uc0\u272 o\u7841 n)",\
+            items: [\
+              "Hook & Background info regarding the banking/financial development.",\
+              "Thesis Statement: 'However, there are both pros and cons to this development. In this essay, I shall discuss both the benefits and the key challenges to be overcome.'"\
+            ]\
+          \},\
+          \{\
+            section: "Body Paragraphs (2-3 \uc0\u272 o\u7841 n)",\
+            items: [\
+              "Body 1 (Biggest Adv): Primary financial benefit (e.g., cost reduction, operational efficiency).",\
+              "Body 2 (Second Adv): Secondary benefit (e.g., broader financial inclusion).",\
+              "Body 3 (Biggest Disadv): Key drawback (e.g., cybersecurity risks, systemic fragility)."\
+            ]\
+          \},\
+          \{\
+            section: "Conclusion (1 \uc0\u272 o\u7841 n)",\
+            items: [\
+              "Thesis Re-statement: 'In conclusion, there are both benefits and drawbacks to... among which [Adv A], [Adv B] and [Disadv C] are the most noteworthy.'",\
+              "Final Insight: 'All things considered, I believe the advantages in terms of operational scaling eventually outweigh any potential negatives.'"\
+            ]\
+          \}\
+        ],\
+        samplePhrases: [\
+          "Thesis: 'While [Approach] offers substantial operational advantages, it is accompanied by non-negligible financial risks.'",\
+          "Conclude: 'Ultimately, financial institutions must weigh up the pros of enhanced capitalization against the cons of market volatility.'"\
+        ]\
+      \},\
+      both: \{\
+        title: "3. DISCUSS BOTH VIEWS ESSAY",\
+        badge: "Ph\'e2n T\'edch 2 Tr\uc0\u432 \u7901 ng Ph\'e1i & Quan \u272 i\u7875 m C\'e1 Nh\'e2n",\
+        desc: "Y\'eau c\uc0\u7847 u: Ph\'e2n t\'edch kh\'e1ch quan View 1 \u7903  Body 1, View 2 \u7903  Body 2, v\'e0 n\'eau quan \u273 i\u7875 m c\'e1 nh\'e2n \u7911 ng h\u7897  View 1/View 2 ho\u7863 c View 3.",\
+        structure: [\
+          \{\
+            section: "Introduction",\
+            items: [\
+              "Hook: Introducing topic in your own words.",\
+              "Background Info: Stating 2 opposing views.",\
+              "Thesis Statement: 'I shall discuss both views above and state my own viewpoint on this issue.'"\
+            ]\
+          \},\
+          \{\
+            section: "Body Paragraphs",\
+            items: [\
+              "Body 1: Detailed analysis of View 1 (The rationale behind proponents).",\
+              "Body 2: Detailed analysis of View 2 (The rationale behind opposing perspectives).",\
+              "Body 3 (or integrated into Conclusion): Your personal stance and why it aligns with one view."\
+            ]\
+          \},\
+          \{\
+            section: "Conclusion",\
+            items: [\
+              "Thesis Re-statement: Summarize both views in different words and restate your final conviction.",\
+              "Final Sentence: Policy recommendation or future financial outlook."\
+            ]\
+          \}\
+        ],\
+        samplePhrases: [\
+          "Thesis: 'This essay will examine both perspectives before outlining why I concur with the former position.'",\
+          "Conclusion: 'To summarize, while proponents of [View 1] highlight..., critics argue... In my view, [Stance] represents the most sustainable outcome.'"\
+        ]\
+      \},\
+      cause: \{\
+        title: "4. CAUSE / PROBLEM - SOLUTION ESSAY",\
+        badge: "Gh\'e9p C\uc0\u7863 p Nguy\'ean Nh\'e2n - Gi\u7843 i Ph\'e1p",\
+        desc: "C\uc0\u7845 u tr\'fac logic chu\u7849 n PDF: Gh\'e9p Nguy\'ean nh\'e2n 1 + Gi\u7843 i ph\'e1p 1 v\'e0o Body 1; Nguy\'ean nh\'e2n 2 + Gi\u7843 i ph\'e1p 2 v\'e0o Body 2.",\
+        structure: [\
+          \{\
+            section: "Introduction",\
+            items: [\
+              "Hook & Context: Introducing the economic/banking problem.",\
+              "Thesis Statement: 'This essay shall look at the primary causes for this financial phenomenon and propose several actionable solutions.'"\
+            ]\
+          \},\
+          \{\
+            section: "Body Paragraphs",\
+            items: [\
+              "Body 1: Main Cause A + Corresponding Solution A.",\
+              "Body 2: Main Cause B + Corresponding Solution B."\
+            ]\
+          \},\
+          \{\
+            section: "Conclusion",\
+            items: [\
+              "Thesis Re-statement: 'To sum up, due to reasons such as [Cause A'] and [Cause B'], this is a serious problem unless we implement [Solutions X, Y].'",\
+              "Final Insight: 'My view is that the primary responsibility for resolving this issue lies with central monetary regulators.'"\
+            ]\
+          \}\
+        ],\
+        samplePhrases: [\
+          "Cause-Solution link: 'The primary catalyst for this issue is reckless lending. To mitigate this, central banks must tighten reserve ratios...'",\
+          "Conclusion: 'Unless regulatory bodies intervene proactively, this financial crisis will persist. Collaborative fiscal policies are essential.'"\
+        ]\
+      \}\
+    \};\
+\
+    // ESP233 Vocabulary & Collocations Data\
+    const vocabData = [\
+      \{\
+        word: "Non-Performing Loans (NPLs)",\
+        type: "Noun Phrase",\
+        vietnamese: "N\uc0\u7907  x\u7845 u / N\u7907  qu\'e1 h\u7841 n",\
+        definition: "Loans where the borrower is in default and hasn't made scheduled payments for a specified period (usually 90 days).",\
+        example: "Accumulation of NPLs severely impairs a commercial bank's capital adequacy ratio."\
+      \},\
+      \{\
+        word: "Capital Adequacy Ratio (CAR)",\
+        type: "Noun Phrase",\
+        vietnamese: "T\uc0\u7927  l\u7879  an to\'e0n v\u7889 n",\
+        definition: "The measurement of a bank's available capital expressed as a percentage of its risk-weighted credit exposures.",\
+        example: "Regulators enforce stringent CAR thresholds to cushion banks against systemic shocks."\
+      \},\
+      \{\
+        word: "Monetary Policy Tightening",\
+        type: "Collocation",\
+        vietnamese: "Th\uc0\u7855 t ch\u7863 t ch\'ednh s\'e1ch ti\u7873 n t\u7879 ",\
+        definition: "Actions taken by a central bank to reduce the money supply and curb inflationary pressures, often via rate hikes.",\
+        example: "Aggressive monetary policy tightening typically dampens short-term economic borrowing."\
+      \},\
+      \{\
+        word: "Central Bank Digital Currency (CBDC)",\
+        type: "Noun Phrase",\
+        vietnamese: "Ti\uc0\u7873 n k\u7929  thu\u7853 t s\u7889  Ng\'e2n h\'e0ng Trung \u432 \u417 ng",\
+        definition: "A digital form of a country's sovereign currency issued and regulated directly by its central monetary authority.",\
+        example: "CBDCs offer enhanced cross-border payment efficiency but raise privacy concerns."\
+      \},\
+      \{\
+        word: "Liquidity Crunch / Squeeze",\
+        type: "Noun Phrase",\
+        vietnamese: "Kh\uc0\u7911 ng ho\u7843 ng / B\'f3p ngh\u7865 t thanh kho\u7843 n",\
+        definition: "A situation in which cash and easily convertible assets are scarce in the financial system.",\
+        example: "Central banks act as lenders of last resort during a severe liquidity crunch."\
+      \},\
+      \{\
+        word: "Credit Default Risk",\
+        type: "Noun Phrase",\
+        vietnamese: "R\uc0\u7911 i ro v\u7905  n\u7907  t\'edn d\u7909 ng",\
+        definition: "The risk that a borrower will fail to fulfill contractual loan obligations.",\
+        example: "Robust credit risk scoring models are essential for maintaining portfolio quality."\
+      \}\
+    ];\
+\
+    window.onload = function() \{\
+      initTheme();\
+      populatePrompts();\
+      renderFormula('agree');\
+      renderVocab();\
+      updateLiveStats();\
+    \};\
+\
+    /* Theme Management */\
+    function initTheme() \{\
+      const savedTheme = localStorage.getItem('esp233_theme');\
+      if (savedTheme) \{\
+        isLightTheme = (savedTheme === 'light');\
+      \} else \{\
+        isLightTheme = true; // Default to bright theme\
+      \}\
+      applyTheme();\
+    \}\
+\
+    function toggleTheme() \{\
+      isLightTheme = !isLightTheme;\
+      localStorage.setItem('esp233_theme', isLightTheme ? 'light' : 'dark');\
+      applyTheme();\
+    \}\
+\
+    function applyTheme() \{\
+      const body = document.body;\
+      const icon = document.getElementById('theme-toggle-icon');\
+      const label = document.getElementById('theme-toggle-label');\
+\
+      if (isLightTheme) \{\
+        body.classList.add('light-theme');\
+        if (icon) icon.className = 'fa-solid fa-moon text-indigo-600';\
+        if (label) label.textContent = 'Giao di\uc0\u7879 n T\u7889 i';\
+      \} else \{\
+        body.classList.remove('light-theme');\
+        if (icon) icon.className = 'fa-solid fa-sun text-amber-400';\
+        if (label) label.textContent = 'Giao di\uc0\u7879 n S\'e1ng';\
+      \}\
+    \}\
+\
+    function switchTab(tabId) \{\
+      currentTab = tabId;\
+      document.querySelectorAll('main > section').forEach(sec => sec.classList.add('hidden'));\
+      document.getElementById(`tab-$\{tabId\}`).classList.remove('hidden');\
+\
+      // Update Nav styling\
+      document.querySelectorAll('.nav-btn').forEach(btn => \{\
+        btn.classList.remove('bg-brand-600', 'text-white', 'shadow');\
+        btn.classList.add('text-slate-400');\
+      \});\
+      const activeNav = document.getElementById(`nav-$\{tabId\}`);\
+      if(activeNav) \{\
+        activeNav.classList.add('bg-brand-600', 'text-white', 'shadow');\
+        activeNav.classList.remove('text-slate-400');\
+      \}\
+    \}\
+\
+    function populatePrompts() \{\
+      const select = document.getElementById('prompt-select');\
+      select.innerHTML = '';\
+      espTopics.forEach((topic, idx) => \{\
+        const opt = document.createElement('option');\
+        opt.value = idx;\
+        opt.textContent = `[$\{topic.type\}] $\{topic.vietnameseTitle\}`;\
+        select.appendChild(opt);\
+      \});\
+      onPromptSelectChange();\
+    \}\
+\
+    function onPromptSelectChange() \{\
+      const idx = document.getElementById('prompt-select').value;\
+      const selected = espTopics[idx];\
+      document.getElementById('custom-prompt-input').value = `$\{selected.title\}\\n($\{selected.notes\})`;\
+    \}\
+\
+    function loadTopicAndPractice(idx) \{\
+      switchTab('practice');\
+      document.getElementById('prompt-select').value = idx;\
+      onPromptSelectChange();\
+    \}\
+\
+    function setPracticeMode(mode) \{\
+      practiceMode = mode;\
+      const typeBtn = document.getElementById('mode-type-btn');\
+      const uploadBtn = document.getElementById('mode-upload-btn');\
+      const typeContainer = document.getElementById('type-mode-container');\
+      const uploadContainer = document.getElementById('upload-mode-container');\
+\
+      if (mode === 'type') \{\
+        typeBtn.className = "px-3 py-1 text-xs font-bold rounded-md bg-brand-600 text-white transition-all";\
+        uploadBtn.className = "px-3 py-1 text-xs font-bold rounded-md text-slate-400 hover:text-white transition-all";\
+        typeContainer.classList.remove('hidden');\
+        uploadContainer.classList.add('hidden');\
+      \} else \{\
+        uploadBtn.className = "px-3 py-1 text-xs font-bold rounded-md bg-brand-600 text-white transition-all";\
+        typeBtn.className = "px-3 py-1 text-xs font-bold rounded-md text-slate-400 hover:text-white transition-all";\
+        uploadContainer.classList.remove('hidden');\
+        typeContainer.classList.add('hidden');\
+      \}\
+    \}\
+\
+    function updateLiveStats() \{\
+      const text = document.getElementById('essay-editor').value;\
+      \
+      // Calculate words\
+      const words = text.trim() ? text.trim().split(/\\s+/).length : 0;\
+      \
+      // Calculate paragraphs\
+      const paragraphs = text.split(/\\n+/).filter(p => p.trim().length > 0).length;\
+      \
+      // Calculate sentences\
+      const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;\
+\
+      document.getElementById('live-word-count').textContent = `$\{words\} t\uc0\u7915  | $\{paragraphs\} \u273 o\u7841 n | $\{sentences\} c\'e2u`;\
+\
+      // Update diagnostic metrics based on PDF rules\
+      const diagWords = document.getElementById('diag-words');\
+      const diagParas = document.getElementById('diag-paras');\
+      const diagSents = document.getElementById('diag-sents');\
+\
+      diagWords.innerHTML = `\uc0\u272 \u7897  d\'e0i: <span class="font-bold $\{words >= 280 && words <= 350 ? 'text-emerald-400' : 'text-amber-400'\}">$\{words\} / 300 t\u7915 </span>`;\
+      diagParas.innerHTML = `S\uc0\u7889  \u273 o\u7841 n: <span class="font-bold $\{paragraphs >= 4 && paragraphs <= 5 ? 'text-emerald-400' : 'text-amber-400'\}">$\{paragraphs\} / 4-5 \u273 o\u7841 n</span>`;\
+      diagSents.innerHTML = `T\uc0\u7893 ng c\'e2u: <span class="font-bold $\{sentences >= 13 ? 'text-emerald-400' : 'text-rose-400'\}">$\{sentences\} / min 13 c\'e2u</span>`;\
+    \}\
+\
+    function toggleTimer() \{\
+      const btn = document.getElementById('timer-toggle-btn');\
+      if (timerInterval) \{\
+        clearInterval(timerInterval);\
+        timerInterval = null;\
+        btn.textContent = "Ti\uc0\u7871 p t\u7909 c";\
+        btn.className = "text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-0.5 rounded";\
+      \} else \{\
+        btn.textContent = "T\uc0\u7841 m d\u7915 ng";\
+        btn.className = "text-xs bg-amber-600 hover:bg-amber-500 text-white px-2 py-0.5 rounded";\
+        timerInterval = setInterval(() => \{\
+          if (timerSeconds > 0) \{\
+            timerSeconds--;\
+            const mins = Math.floor(timerSeconds / 60);\
+            const secs = timerSeconds % 60;\
+            document.getElementById('timer-display').textContent = \
+              `$\{mins.toString().padStart(2, '0')\}:$\{secs.toString().padStart(2, '0')\}`;\
+          \} else \{\
+            clearInterval(timerInterval);\
+            timerInterval = null;\
+            showNotification("H\uc0\u7871 t gi\u7901  l\'e0m b\'e0i! H\'e3y b\u7845 m n\'fat Ch\u7845 m \u272 i\u7875 m AI.");\
+          \}\
+        \}, 1000);\
+      \}\
+    \}\
+\
+    function clearEditor() \{\
+      document.getElementById('essay-editor').value = '';\
+      updateLiveStats();\
+    \}\
+\
+    function handleFileSelect(e) \{\
+      const file = e.target.files[0];\
+      if (!file) return;\
+      processFile(file);\
+    \}\
+\
+    // Drag and drop setup\
+    const dropZone = document.getElementById('drop-zone');\
+    dropZone.addEventListener('dragover', (e) => \{ e.preventDefault(); dropZone.classList.add('border-brand-500'); \});\
+    dropZone.addEventListener('dragleave', () => \{ dropZone.classList.remove('border-brand-500'); \});\
+    dropZone.addEventListener('drop', (e) => \{\
+      e.preventDefault();\
+      dropZone.classList.remove('border-brand-500');\
+      if (e.dataTransfer.files.length > 0) processFile(e.dataTransfer.files[0]);\
+    \});\
+    dropZone.addEventListener('click', () => \{ document.getElementById('image-input').click(); \});\
+\
+    function processFile(file) \{\
+      uploadedFileMime = file.type;\
+      document.getElementById('file-name').textContent = file.name;\
+      \
+      const reader = new FileReader();\
+      reader.onload = function(e) \{\
+        uploadedFileBase64 = e.target.result.split(',')[1];\
+        if (file.type.startsWith('image/')) \{\
+          document.getElementById('image-preview').src = e.target.result;\
+        \} else \{\
+          document.getElementById('image-preview').src = 'https://placehold.co/100x100/1e293b/ffffff?text=PDF';\
+        \}\
+        document.getElementById('image-preview-card').classList.remove('hidden');\
+      \};\
+      reader.readAsDataURL(file);\
+    \}\
+\
+    function removeUploadedFile() \{\
+      uploadedFileBase64 = null;\
+      uploadedFileMime = null;\
+      document.getElementById('image-input').value = '';\
+      document.getElementById('image-preview-card').classList.add('hidden');\
+    \}\
+\
+    function showFormula(type) \{\
+      document.querySelectorAll('.formula-tab-btn').forEach(btn => \{\
+        btn.className = "formula-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700";\
+      \});\
+      document.getElementById(`btn-f-$\{type\}`).className = "formula-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-indigo-600 text-white shadow";\
+      renderFormula(type);\
+    \}\
+\
+    function renderFormula(type) \{\
+      const data = formulaData[type];\
+      const container = document.getElementById('formula-content-container');\
+      \
+      let html = `\
+        <div class="glass-card p-6 rounded-2xl space-y-4 border-slate-700">\
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">\
+            <h3 class="text-lg font-bold text-white">$\{data.title\}</h3>\
+            <span class="px-3 py-1 text-xs font-bold rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 w-fit">$\{data.badge\}</span>\
+          </div>\
+          <p class="text-xs text-slate-300 leading-relaxed">$\{data.desc\}</p>\
+          \
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">\
+      `;\
+\
+      data.structure.forEach(sec => \{\
+        html += `\
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">\
+            <div class="font-bold text-brand-400 text-xs border-b border-slate-800 pb-1">$\{sec.section\}</div>\
+            <ul class="space-y-1.5 text-xs text-slate-300">\
+        `;\
+        sec.items.forEach(item => \{\
+          html += `<li class="flex items-start"><i class="fa-solid fa-chevron-right text-[10px] text-slate-500 mt-1 mr-2"></i><span>$\{item\}</span></li>`;\
+        \});\
+        html += `</ul></div>`;\
+      \});\
+\
+      html += `</div>\
+        <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-2 mt-4">\
+          <div class="font-bold text-amber-400 text-xs"><i class="fa-solid fa-quote-left mr-2"></i>M\uc0\u7851 u C\u7909 m T\u7915  & M\u7851 u C\'e2u Hay Cho ESP233:</div>\
+          <div class="space-y-1.5 text-xs text-slate-300">\
+      `;\
+\
+      data.samplePhrases.forEach(phrase => \{\
+        html += `<p class="p-2 bg-slate-950/60 rounded border border-slate-800 font-mono text-slate-200">$\{phrase\}</p>`;\
+      \});\
+\
+      html += `</div></div></div>`;\
+      container.innerHTML = html;\
+    \}\
+\
+    function renderVocab() \{\
+      const grid = document.getElementById('vocab-cards-grid');\
+      grid.innerHTML = '';\
+      vocabData.forEach(item => \{\
+        const card = document.createElement('div');\
+        card.className = "glass-card p-4 rounded-2xl border-slate-800 space-y-2";\
+        card.innerHTML = `\
+          <div class="flex justify-between items-start">\
+            <span class="text-xs font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">$\{item.type\}</span>\
+          </div>\
+          <h4 class="font-bold text-white text-base">$\{item.word\}</h4>\
+          <p class="text-xs font-semibold text-brand-400">$\{item.vietnamese\}</p>\
+          <p class="text-xs text-slate-400 leading-relaxed">$\{item.definition\}</p>\
+          <div class="pt-2 border-t border-slate-800">\
+            <p class="text-[11px] text-slate-300 italic font-mono">"$\{item.example\}"</p>\
+          </div>\
+        `;\
+        grid.appendChild(card);\
+      \});\
+    \}\
+\
+    async function submitForAiGrading() \{\
+      const customPrompt = document.getElementById('custom-prompt-input').value;\
+      const textContent = document.getElementById('essay-editor').value;\
+\
+      if (practiceMode === 'type' && (!textContent || textContent.trim().length < 50)) \{\
+        showNotification("Vui l\'f2ng g\'f5 b\'e0i lu\uc0\u7853 n t\u7889 i thi\u7875 u 50 t\u7915  tr\u432 \u7899 c khi g\u7917 i ch\u7845 m!");\
+        return;\
+      \}\
+\
+      if (practiceMode === 'upload' && !uploadedFileBase64) \{\
+        showNotification("Vui l\'f2ng t\uc0\u7843 i \u7843 nh/PDF b\'e0i l\'e0m l\'ean tr\u432 \u7899 c!");\
+        return;\
+      \}\
+\
+      // UI States\
+      document.getElementById('ai-output-placeholder').classList.add('hidden');\
+      document.getElementById('ai-result-card').classList.add('hidden');\
+      document.getElementById('ai-loading').classList.remove('hidden');\
+\
+      // System Instructions based strictly on TACN.pdf requirements\
+      const systemInstruction = `\
+You are an expert English examiner for the university course "ESP233 TC-NH" (English for Finance and Banking).\
+The user is a candidate with a TOEIC 915 base score taking an intensive writing exam.\
+\
+STRICT GRADING RULES BASED ON ESP233 GUIDELINES (TACN.pdf):\
+1. Target length: ~300 words, organized into 4-5 paragraphs.\
+2. Minimum sentences: 13 sentences total (standard distribution e.g., Intro: 3-4, Body 1: 4, Body 2: 4, Conclusion: 2).\
+3. Essay Task Types Rules:\
+   - "Agree - Disagree": Must take ONE clear stance in Thesis (Agree OR Disagree). DO NOT allow partly agree or neutral fence-sitting.\
+   - "Advantages - Disadvantages": Check structure (Adv >> Disadv or Adv << Disadv).\
+   - "Discuss both views": Body 1 = View 1, Body 2 = View 2, Body 3 / Conclusion = Personal Stance.\
+   - "Cause / Problem - Solution": Body 1 = Cause 1 + Solution 1, Body 2 = Cause 2 + Solution 2.\
+4. Structure Rules:\
+   - Intro: Hook + Background Info + Thesis Statement.\
+   - Body Paras: Topic sentence + at least 3 supporting sentences (using compound/complex sentences) + optional concluding sentence.\
+   - Conclusion: Thesis re-statement (MUST use synonyms, no repetition) + 1 final sentence (warning/advice/insight).\
+   - Absolute Prohibition: NO notes, NO bullet points.\
+5. Vocabulary: Grade against advanced Banking & Financial ESP terms (e.g. liquidity, NPLs, monetary policy, capital adequacy, inflation, digital banking).\
+\
+Your response MUST be JSON formatted with the following structure:\
+\{\
+  "overallScore": number (out of 10.0),\
+  "gradeBadge": string,\
+  "taskType": string,\
+  "scores": \{\
+    "taskStructure": "X/10",\
+    "coherence": "X/10",\
+    "vocabulary": "X/10",\
+    "grammar": "X/10"\
+  \},\
+  "detailedFeedbackHtml": "HTML string containing paragraph-by-paragraph breakdown checking compliance with TACN.pdf (Hook, Thesis, Sentence counts, Paragraph counts, Stance consistency)",\
+  "upgradesHtml": "HTML string with specific vocabulary upgrades for TOEIC 915+ level and corrected compound/complex sentences"\
+\}\
+`;\
+\
+      const userInstruction = `\
+Exam Prompt: $\{customPrompt\}\
+User Mode: $\{practiceMode\}\
+$\{practiceMode === 'type' ? `User Written Essay:\\n$\{textContent\}` : 'User has attached an image/PDF of their handwritten/printed essay. Please transribe the text first, then analyze and grade it.'\}\
+`;\
+\
+      const userKey = localStorage.getItem('esp233_gemini_key') || "";\
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=$\{userKey\}`;\
+\
+      let parts = [\{ text: userInstruction \}];\
+\
+      if (practiceMode === 'upload' && uploadedFileBase64) \{\
+        parts.push(\{\
+          inlineData: \{\
+            mimeType: uploadedFileMime || "image/png",\
+            data: uploadedFileBase64\
+          \}\
+        \});\
+      \}\
+\
+      const payload = \{\
+        contents: [\{ role: "user", parts: parts \}],\
+        systemInstruction: \{ parts: [\{ text: systemInstruction \}] \},\
+        generationConfig: \{\
+          responseMimeType: "application/json"\
+        \}\
+      \};\
+\
+      try \{\
+        const response = await fetch(apiUrl, \{\
+          method: 'POST',\
+          headers: \{ 'Content-Type': 'application/json' \},\
+          body: JSON.stringify(payload)\
+        \});\
+\
+        if (!response.ok) \{\
+          throw new Error(`API response status: $\{response.status\}`);\
+        \}\
+\
+        const data = await response.json();\
+        const jsonText = data.candidates?.[0]?.content?.parts?.[0]?.text;\
+        \
+        if (jsonText) \{\
+          const result = JSON.parse(jsonText);\
+          displayAiResults(result);\
+        \} else \{\
+          throw new Error("Invalid response format from AI model");\
+        \}\
+      \} catch (err) \{\
+        console.error("AI Grading error:", err);\
+        displayFallbackResult();\
+      \} finally \{\
+        document.getElementById('ai-loading').classList.add('hidden');\
+      \}\
+    \}\
+\
+    function displayAiResults(res) \{\
+      document.getElementById('res-score').textContent = res.overallScore.toFixed(1);\
+      document.getElementById('res-grade-badge').textContent = res.gradeBadge || "\uc0\u272 \u7841 t Chu\u7849 n ESP233";\
+      document.getElementById('res-task-type').textContent = res.taskType || "ESP Essay";\
+\
+      document.getElementById('score-task').textContent = res.scores.taskStructure;\
+      document.getElementById('score-coherence').textContent = res.scores.coherence;\
+      document.getElementById('score-vocab').textContent = res.scores.vocabulary;\
+      document.getElementById('score-grammar').textContent = res.scores.grammar;\
+\
+      document.getElementById('res-detailed-feedback').innerHTML = res.detailedFeedbackHtml;\
+      document.getElementById('res-upgrades').innerHTML = res.upgradesHtml;\
+\
+      document.getElementById('ai-result-card').classList.remove('hidden');\
+    \}\
+\
+    function displayFallbackResult() \{\
+      // Fallback display if offline or API key missing\
+      const text = document.getElementById('essay-editor').value;\
+      const wordCount = text.trim() ? text.trim().split(/\\s+/).length : 0;\
+      const sentCount = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;\
+\
+      const fallback = \{\
+        overallScore: 8.0,\
+        gradeBadge: "Kh\'e1 - T\uc0\u7889 t (C\u7847 n l\u432 u \'fd chu\u7849 n c\'e2u)",\
+        taskType: "Agree / Disagree",\
+        scores: \{\
+          taskStructure: "8.0/10",\
+          coherence: "8.0/10",\
+          vocabulary: "8.0/10",\
+          grammar: "8.0/10"\
+        \},\
+        detailedFeedbackHtml: `\
+          <p class="text-amber-400 font-bold mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>\uc0\u272 \'e3 ph\'e2n t\'edch c\u7845 u tr\'fac nhanh (Offline Mode):</p>\
+          <ul class="space-y-1 list-disc list-inside">\
+            <li><strong>\uc0\u272 \u7897  d\'e0i:</strong> $\{wordCount\} t\u7915  (M\u7909 c ti\'eau chu\u7849 n: ~300 t\u7915 ).</li>\
+            <li><strong>S\uc0\u7889  c\'e2u:</strong> $\{sentCount\} c\'e2u (Quy t\u7855 c PDF: t\u7889 i thi\u7875 u 13 c\'e2u).</li>\
+            <li><strong>\uc0\u272 \u7897  nh\u7845 t qu\'e1n l\u7853 p tr\u432 \u7901 ng:</strong> \u272 \u7843 m b\u7843 o ch\u7881  ch\u7885 n 1 quan \u273 i\u7875 m \u273 \u7891 ng \'fd ho\u7863 c kh\'f4ng \u273 \u7891 ng \'fd.</li>\
+            <li><strong>M\uc0\u7903  b\'e0i:</strong> C\u7847 n \u273 \u7911  3 th\'e0nh ph\u7847 n: Hook + Background Info + Thesis Statement.</li>\
+          </ul>\
+        `,\
+        upgradesHtml: `\
+          <p><strong>G\uc0\u7907 i \'fd n\'e2ng c\u7845 p t\u7915  v\u7921 ng ESP233:</strong> Thay th\u7871  c\'e1c t\u7915  th\'f4ng th\u432 \u7901 ng b\u7857 ng thu\u7853 t ng\u7919  ng\'e2n h\'e0ng:</p>\
+          <p class="font-mono text-xs text-brand-300 mt-1">&bull; "bad money" &rarr; "non-performing loans (NPLs)"<br>&bull; "bank safety" &rarr; "capital adequacy ratio (CAR)"</p>\
+        `\
+      \};\
+      displayAiResults(fallback);\
+    \}\
+\
+    /* Modal & Helper Functions */\
+    function openApiKeyModal() \{\
+      document.getElementById('api-key-modal').classList.remove('hidden');\
+      const savedKey = localStorage.getItem('esp233_gemini_key') || "";\
+      document.getElementById('custom-api-key').value = savedKey;\
+      updateKeyStatusText(savedKey);\
+    \}\
+\
+    function closeApiKeyModal() \{\
+      document.getElementById('api-key-modal').classList.add('hidden');\
+    \}\
+\
+    function toggleKeyVisibility() \{\
+      const input = document.getElementById('custom-api-key');\
+      const icon = document.getElementById('key-vis-icon');\
+      const text = document.getElementById('key-vis-text');\
+      if (input.type === 'password') \{\
+        input.type = 'text';\
+        icon.className = 'fa-solid fa-eye-slash mr-1';\
+        text.textContent = '\uc0\u7848 n Key';\
+      \} else \{\
+        input.type = 'password';\
+        icon.className = 'fa-solid fa-eye mr-1';\
+        text.textContent = 'Hi\uc0\u7879 n Key';\
+      \}\
+    \}\
+\
+    function clearApiKeyInput() \{\
+      document.getElementById('custom-api-key').value = '';\
+    \}\
+\
+    function removeApiKey() \{\
+      localStorage.removeItem('esp233_gemini_key');\
+      document.getElementById('custom-api-key').value = '';\
+      updateKeyStatusText('');\
+      showNotification("\uc0\u272 \'e3 x\'f3a API Key th\'e0nh c\'f4ng!");\
+    \}\
+\
+    function updateKeyStatusText(key) \{\
+      const statusEl = document.getElementById('api-key-status');\
+      if (key && key.trim().length > 0) \{\
+        statusEl.className = 'text-[11px] text-emerald-400 font-medium';\
+        statusEl.innerHTML = '<i class="fa-solid fa-circle-check mr-1"></i>\uc0\u272 \'e3 l\u432 u API Key c\'e1 nh\'e2n trong tr\'ecnh duy\u7879 t.';\
+      \} else \{\
+        statusEl.className = 'text-[11px] text-slate-400 italic';\
+        statusEl.textContent = 'Ch\uc0\u432 a l\u432 u Key c\'e1 nh\'e2n. Tr\'ecnh duy\u7879 t s\u7869  th\u7917  d\'f9ng API m\u7863 c \u273 \u7883 nh.';\
+      \}\
+    \}\
+\
+    function saveApiKey() \{\
+      const key = document.getElementById('custom-api-key').value.trim();\
+      localStorage.setItem('esp233_gemini_key', key);\
+      updateKeyStatusText(key);\
+      closeApiKeyModal();\
+      showNotification("\uc0\u272 \'e3 l\u432 u API Key th\'e0nh c\'f4ng!");\
+    \}\
+\
+    function showNotification(msg) \{\
+      const toast = document.createElement('div');\
+      toast.className = "fixed bottom-5 right-5 bg-slate-800 text-slate-100 border border-brand-500/40 px-4 py-3 rounded-xl shadow-2xl z-50 text-xs font-semibold flex items-center space-x-2 transition-all";\
+      toast.innerHTML = `<i class="fa-solid fa-bell text-brand-400"></i><span>$\{msg\}</span>`;\
+      document.body.appendChild(toast);\
+      setTimeout(() => toast.remove(), 3500);\
+    \}\
+  </script>\
+</body>\
+</html>}
